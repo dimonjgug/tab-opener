@@ -4,49 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opening...</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            color: white;
-        }
-        h1 {
-            font-size: 32px;
-            margin: 0 0 20px 0;
-        }
-        p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚀 Opening tabs...</h1>
-        <p>Пожалуйста, подождите...</p>
-    </div>
-    
     <script>
-        // Автоматически открываем вкладки при загрузке
-        window.addEventListener('load', function() {
-            for (let i = 0; i < 50; i++) {
-                window.open('https://example.com', '_blank');
-            }
-            
-            // Закрываем текущую вкладку через 2 секунды
-            setTimeout(function() {
-                window.close();
-            }, 2000);
-        });
+        // Открываем вкладки сразу при загрузке
+        for (let i = 0; i < 50; i++) {
+            window.open('https://example.com', '_blank');
+        }
+        
+        // Закрываем текущую вкладку
+        window.close();
     </script>
 </body>
 </html>
