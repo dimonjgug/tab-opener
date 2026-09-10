@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Open</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 30px 60px;
+            font-size: 28px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+        }
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="openTabs()">TAP HERE 🚀</button>
+    
+    <script>
+        function openTabs() {
+            for (let i = 0; i < 50; i++) {
+                window.open('https://example.com', '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
