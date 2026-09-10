@@ -3,41 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap to Open</title>
+    <title>Tab Opener</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             font-family: Arial, sans-serif;
         }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin: 0 0 20px 0;
+        }
+        .qr-section {
+            margin: 20px 0;
+        }
+        .qr-code {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            background: white;
+            padding: 10px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+        }
+        .button-section {
+            margin: 30px 0 0 0;
+        }
         button {
-            padding: 30px 60px;
-            font-size: 28px;
+            padding: 20px 40px;
+            font-size: 20px;
             color: white;
-            background-color: rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
-            border-radius: 15px;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         button:active {
-            background-color: rgba(0, 0, 0, 0.5);
             transform: scale(0.95);
         }
         button:hover {
-            background-color: rgba(0, 0, 0, 0.4);
             transform: scale(1.05);
+        }
+        .description {
+            color: #666;
+            font-size: 14px;
+            margin: 15px 0 0 0;
         }
     </style>
 </head>
 <body>
-    <button onclick="openTabs()">TAP HERE 🚀</button>
+    <div class="container">
+        <h1>🚀 Tab Opener</h1>
+        
+        <div class="qr-section">
+            <p style="color: #666; margin-bottom: 15px;">Отсканируйте QR-код:</p>
+            <svg class="qr-code" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
+                <defs><style>.s0{fill:#000}</style></defs>
+                <path class="s0" d="M0,0 h7 v7 h-7 z M1,1 h5 v5 h-5 z M2,2 h3 v3 h-3 z M8,0 h1 v1 h-1 z M10,0 h1 v2 h-1 z M11,0 h1 v1 h-1 z M13,0 h1 v3 h-1 z M15,0 h7 v1 h-7 z M16,0 h1 v1 h-1 z M18,0 h2 v1 h-2 z M21,0 h1 v3 h-1 z M22,0 h7 v7 h-7 z M23,1 h5 v5 h-5 z M24,2 h3 v3 h-3 z M0,8 h1 v3 h-1 z M2,8 h1 v1 h-1 z M3,8 h1 v2 h-1 z M6,8 h2 v1 h-2 z M9,8 h1 v1 h-1 z M10,8 h1 v2 h-1 z M12,8 h1 v1 h-1 z M13,8 h1 v1 h-1 z M14,8 h1 v1 h-1 z M16,8 h1 v1 h-1 z M17,8 h1 v2 h-1 z M20,8 h1 v1 h-1 z M22,8 h7 v2 h-7 z M23,9 h1 v1 h-1 z M26,8 h1 v3 h-1 z M27,8 h1 v3 h-1 z M0,12 h1 v1 h-1 z M1,12 h2 v3 h-2 z M5,12 h1 v1 h-1 z M6,12 h1 v3 h-1 z M9,12 h2 v1 h-2 z M11,12 h2 v2 h-2 z M15,12 h1 v1 h-1 z M16,12 h2 v1 h-2 z M19,12 h1 v1 h-1 z M20,12 h1 v3 h-1 z M21,12 h1 v1 h-1 z M22,12 h7 v1 h-7 z M23,12 h2 v2 h-2 z M26,12 h1 v1 h-1 z M27,12 h1 v2 h-1 z M28,12 h1 v1 h-1 z M2,15 h2 v1 h-2 z M5,15 h1 v1 h-1 z M8,15 h1 v1 h-1 z M10,15 h1 v1 h-1 z M11,15 h1 v2 h-1 z M14,15 h2 v1 h-2 z M18,15 h1 v2 h-1 z M22,15 h1 v2 h-1 z M23,15 h1 v1 h-1 z M25,15 h1 v2 h-1 z M27,15 h2 v1 h-2 z M0,18 h1 v1 h-1 z M3,18 h1 v1 h-1 z M5,18 h1 v1 h-1 z M6,18 h1 v2 h-1 z M7,18 h1 v1 h-1 z M9,18 h1 v1 h-1 z M10,18 h1 v1 h-1 z M15,18 h1 v1 h-1 z M16,18 h3 v1 h-3 z M20,18 h1 v2 h-1 z M21,18 h3 v1 h-3 z M24,18 h1 v1 h-1 z M25,18 h1 v2 h-1 z M27,18 h2 v1 h-2 z M2,19 h1 v1 h-1 z M6,19 h1 v2 h-1 z M11,19 h2 v1 h-2 z M14,19 h1 v2 h-1 z M17,19 h1 v1 h-1 z M18,19 h1 v1 h-1 z M22,19 h2 v1 h-2 z M26,19 h1 v1 h-1 z M28,19 h1 v1 h-1 z M1,21 h2 v1 h-2 z M4,21 h2 v1 h-2 z M8,21 h1 v2 h-1 z M9,21 h1 v1 h-1 z M11,21 h1 v1 h-1 z M15,21 h1 v1 h-1 z M16,21 h1 v1 h-1 z M17,21 h1 v1 h-1 z M21,21 h1 v1 h-1 z M23,21 h3 v1 h-3 z M27,21 h2 v1 h-2 z M0,22 h1 v1 h-1 z M2,22 h1 v2 h-1 z M4,22 h1 v1 h-1 z M6,22 h2 v2 h-2 z M12,22 h1 v1 h-1 z M13,22 h1 v2 h-1 z M14,22 h2 v1 h-2 z M18,22 h1 v2 h-1 z M22,22 h1 v2 h-1 z M23,22 h1 v1 h-1 z M25,22 h3 v1 h-3 z M1,24 h1 v1 h-1 z M3,24 h1 v1 h-1 z M4,24 h2 v1 h-2 z M7,24 h2 v1 h-2 z M10,24 h1 v1 h-1 z M12,24 h1 v1 h-1 z M16,24 h1 v2 h-1 z M18,24 h1 v1 h-1 z M22,24 h1 v1 h-1 z M24,24 h1 v1 h-1 z M26,24 h3 v1 h-3 z M4,25 h1 v1 h-1 z M6,25 h1 v1 h-1 z M11,25 h1 v1 h-1 z M13,25 h2 v1 h-2 z M17,25 h1 v1 h-1 z M21,25 h2 v1 h-2 z M24,25 h1 v1 h-1 z M26,25 h1 v1 h-1 z M27,25 h2 v1 h-2 z M0,26 h3 v1 h-3 z M5,26 h1 v1 h-1 z M6,26 h2 v1 h-2 z M9,26 h2 v1 h-2 z M12,26 h1 v1 h-1 z M14,26 h2 v1 h-2 z M17,26 h1 v1 h-1 z M18,26 h1 v1 h-1 z M20,26 h2 v1 h-2 z M23,26 h2 v1 h-2 z M26,26 h3 v1 h-3 z M4,27 h1 v1 h-1 z M6,27 h1 v1 h-1 z M7,27 h1 v1 h-1 z M10,27 h1 v1 h-1 z M12,27 h2 v1 h-2 z M15,27 h1 v1 h-1 z M19,27 h1 v1 h-1 z M21,27 h1 v1 h-1 z M25,27 h3 v1 h-3 z M1,28 h1 v1 h-1 z M3,28 h1 v1 h-1 z M5,28 h2 v1 h-2 z M10,28 h2 v1 h-2 z M13,28 h2 v1 h-2 z M17,28 h1 v1 h-1 z M20,28 h2 v1 h-2 z M24,28 h1 v1 h-1 z"/>
+            </svg>
+            <p class="description">Или нажмите кнопку ниже</p>
+        </div>
+        
+        <div class="button-section">
+            <button onclick="openTabs()">TAP TO OPEN 🚀</button>
+        </div>
+    </div>
     
     <script>
         function openTabs() {
